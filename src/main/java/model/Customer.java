@@ -4,7 +4,6 @@ public class Customer {
     private int idCustomer;
     private String name;
     private String phone;
-    private String cpf;
     private String street; //rua
     private String number; //number could be 66B
     private String district; //bairro
