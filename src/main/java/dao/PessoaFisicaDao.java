@@ -40,7 +40,7 @@ public class PessoaFisicaDao {
     public List<PessoaFisica> pesquisar() throws SQLException, Exception {
         
         List<PessoaFisica> lista = new ArrayList();
-        String query = "SELECT * FROM CUSTOMER";
+        String query = "SELECT * FROM PESSOA_FISICA";
         
         PreparedStatement st = con.prepareStatement(query);
         
