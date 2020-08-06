@@ -47,7 +47,7 @@
 <body>
     <div>
         <form method="POST" action="registerSuccessful.jsp" name="form_aluno">
-            <h1>Cadastrar Cliente</h1>
+            <h1>Cadastrar Pessoa Física</h1>
             <p>
                 <label for="name">Nome</label>
                 <input type="text" id="name" name="nameForm" size="20" maxlength="20">

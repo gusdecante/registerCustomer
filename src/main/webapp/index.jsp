@@ -11,7 +11,7 @@
             align-items: stretch;
             justify-content: center;
             background-color: #eeaa44;
-            width: 40vw;
+            min-width: 40vw;
             margin: 1em auto;
             padding: 2em;
         }
@@ -52,6 +52,11 @@
             </div>
             <div>
                 <input type="submit" name="btnSearch" id="btnSearch" value="Buscar Cliente">
+            </div>
+        </form>
+        <form class="formThree" method="POST" action="searchCustomer.jsp" name="list_Pessoas_Fisicas">
+            <div>
+                <input type="submit" name="btnList" id="btnList" value="Listar Pessoas Físicas">
             </div>
         </form>
     </div>   

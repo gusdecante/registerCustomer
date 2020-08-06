@@ -10,7 +10,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Listagem Pessoas Físicas</title> 
+    <style>
+        div {
+            border: 2px solid black;
+            margin-top: .5em;
+        }
+    </style>
 </head>
 <body>
     <%
@@ -20,6 +26,7 @@
                 out.println("ok");                
 
                 for (PessoaFisica c : lstPessoaFisica) {
+                    out.println("<div>");
                     out.println("<p>ID: " + c.getIdCustomer() + "</p>");
                     out.println("<p>Nome: " + c.getName() + "</p>");
                     out.println("<p>Telefone: " + c.getPhone() + "</p>");
@@ -28,6 +35,7 @@
                     out.println("<p>Número: " + c.getNumber() + "</p>");
                     out.println("<p>Bairro: " + c.getDistrict() + "</p>");
                     out.println("<p>UF: " + c.getUf() + "</p>");
+                    out.println("</div>");
                 }
 
             } catch (SQLException e) {
