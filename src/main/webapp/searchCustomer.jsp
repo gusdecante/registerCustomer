@@ -14,8 +14,6 @@
 </head>
 <body>
     <%
-            out.println("Consulta ao banco");
-
             try {
                 PessoaFisicaDao dao = new PessoaFisicaDao();
                 List<PessoaFisica> lstPessoaFisica = dao.pesquisar();
