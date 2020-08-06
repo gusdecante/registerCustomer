@@ -69,7 +69,7 @@
                 <input type="submit" name="btnList" id="btnList" value="Listar Pessoas Físicas">
             </div>
         </form>
-        <form class="formFour" method="POST" action="" name="list_Pessoas_Juridicas">
+        <form class="formFour" method="POST" action="searchCustomerEnterprise.jsp" name="list_Pessoas_Juridicas">
             <div>
                 <input type="submit" name="btnListEnterprise" id="btnListEnterprise" value="Listar Pessoas Jurídicas">
             </div>
