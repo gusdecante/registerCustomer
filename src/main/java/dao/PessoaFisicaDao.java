@@ -7,18 +7,18 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Customer;
+import model.PessoaFisica;
 import util.ConexaoBanco;
 
-public class CustomerDao {
+public class PessoaFisicaDao {
     private Connection con;
 
-    public CustomerDao() {
+    public PessoaFisicaDao() {
         this.con = new ConexaoBanco().getConnection();
     }
 
     // Register customer
-    public void register(Customer c) throws SQLException {
+    public void register(PessoaFisica c) throws SQLException {
         String query;
         query = "INSERT INTO CUSTOMER (NAME, PHONE, CPF, STREET, NUMBER, DISTRICT, UF) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
@@ -37,9 +37,9 @@ public class CustomerDao {
     }
 
 
-    public List<Customer> pesquisar() throws SQLException, Exception {
+    public List<PessoaFisica> pesquisar() throws SQLException, Exception {
         
-        List<Customer> lista = new ArrayList();
+        List<PessoaFisica> lista = new ArrayList();
         String query = "SELECT * FROM CUSTOMER";
         
         PreparedStatement st = con.prepareStatement(query);
@@ -47,7 +47,7 @@ public class CustomerDao {
         ResultSet rs = st.executeQuery();
         
         while(rs.next()) {            
-            Customer cus = new Customer();
+            PessoaFisica cus = new PessoaFisica();
             
             cus.setIdCustomer   ( rs.getInt("IDCOSTUMER")  );
             cus.setName   ( rs.getString("NAME")  );

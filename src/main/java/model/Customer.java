@@ -36,15 +36,6 @@ public class Customer {
         this.phone = phone;
     }
 
-    //cpf
-    public String getCPF() {
-        return this.cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
     //street
     public String getStreet() {
         return this.street;

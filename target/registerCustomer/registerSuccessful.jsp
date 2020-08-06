@@ -34,7 +34,7 @@
 </head>
 <body>
     <%
-        Customer cus = new Customer();
+        PessoFisica cus = new PessoFisica();
         cus.setName((String)request.getParameter("nameForm"));
         cus.setPhone((String)request.getParameter("phoneForm"));
         cus.setCpf((String)request.getParameter("cpfForm"));
@@ -43,7 +43,7 @@
         cus.setDistrict((String)request.getParameter("districtForm"));
         cus.setUf((String)request.getParameter("ufForm"));
 
-        CustomerDao dao = new CustomerDao();
+        PessoFisicaDao dao = new PessoFisicaDao();
         dao.register();
     %>
     <div class="main">
