@@ -22,7 +22,7 @@ public class PessoaJuridicaDao {
     // Register customer - Pessoa Jurídica
     public void register(PessoaJuridica c) throws SQLException {
         String query;
-        query = "INSERT INTO PESSOA_JURIDICA (NAME_JUR, PHONE, CNPJ, RAZAOSOCIAL, STREET, NUMBER, DISTRICT, UF) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+        query = "INSERT INTO PESSOA_JURIDICA (NAME, PHONE, CNPJ, RAZAOSOCIAL, STREET, NUMBER, DISTRICT, UF) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         
         PreparedStatement st = con.prepareStatement(query);
         st.setString(1, c.getName());
@@ -50,8 +50,8 @@ public class PessoaJuridicaDao {
         while(rs.next()) {            
             PessoaJuridica cus = new PessoaJuridica();
             
-            cus.setIdCustomer   ( rs.getInt("IDCOSTUMER_JUR")  );
-            cus.setName   ( rs.getString("NAME_JUR")  );
+            cus.setIdCustomer   ( rs.getInt("ID_CUSTOMER_JUR")  );
+            cus.setName   ( rs.getString("NAME")  );
             cus.setPhone   ( rs.getString("PHONE")  );
             cus.setCnpj (rs.getString("CNPJ"));
             cus.setRazaoSocial(rs.getString("RAZAOSOCIAL"));

@@ -49,7 +49,7 @@ public class PessoaFisicaDao {
         while(rs.next()) {            
             PessoaFisica cus = new PessoaFisica();
             
-            cus.setIdCustomer   ( rs.getInt("IDCOSTUMER")  );
+            cus.setIdCustomer   ( rs.getInt("ID_CUSTOMER")  );
             cus.setName   ( rs.getString("NAME")  );
             cus.setPhone   ( rs.getString("PHONE")  );
             cus.setCpf   ( rs.getString("CPF")  );
