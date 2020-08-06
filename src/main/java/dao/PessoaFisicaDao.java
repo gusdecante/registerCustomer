@@ -17,10 +17,10 @@ public class PessoaFisicaDao {
         this.con = new ConexaoBanco().getConnection();
     }
 
-    // Register customer
+    // Register customer - Pessoa Física
     public void register(PessoaFisica c) throws SQLException {
         String query;
-        query = "INSERT INTO CUSTOMER (NAME, PHONE, CPF, STREET, NUMBER, DISTRICT, UF) VALUES (?, ?, ?, ?, ?, ?, ?);";
+        query = "INSERT INTO PESSOA_FISICA (NAME, PHONE, CPF, STREET, NUMBER, DISTRICT, UF) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
         PreparedStatement st = con.prepareStatement(query);
         st.setString(1, c.getName());
