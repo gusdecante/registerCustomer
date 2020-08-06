@@ -1,5 +1,5 @@
 Estrutura do banco
-Obs: Banco desenvolvido para fim didática apenas, sem me ater a modelagem de dados
+Obs: Banco desenvolvido para fim didático apenas, sem me ater a modelagem de dados
 
 -Pessoa Física:
 +-------------+-------------+------+-----+---------+----------------+
