@@ -39,7 +39,6 @@
                     //out.println("<p>Bairro: " + c.getDistrict() + "</p>");
                     //out.println("<p>UF: " + c.getUf() + "</p>");
                     //out.println("</div>");
-
                     Gson gson = null;
 
                     String pessoaJuridica = new Gson().toJson(c);

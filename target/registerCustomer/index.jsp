@@ -52,13 +52,23 @@
     <div class="main">
         <form class="formOne" method="POST" action="registerCustomer.jsp" name="register_Customer">
             <div>
+                <select name="customer-type">
+                    <option value="-">Pessoa Física ou Jurídica?</option>
+                    <option value="1" name="Customer">Pessoa Física</option>
+                    <option value="2" name="Enterprise">Pessoa Jurídica</option>
+                </select>  
                 <input type="submit" name="btnRegister" id="btnRegiter" value="Cadastrar Cliente">
             </div>
         </form>
-        <form class="formTwo" method="POST" action="searchCustomer.jsp" name="search_Customer">
+        <form class="formTwo" method="GET" action="searchCustomer.jsp" name="search_Customer">
             <div>
-                <label for="name">Insira o nome do Cliente</label>
+                <label for="name">Verifique se o cliente está cadastrado:</label>
                 <input type="text" id="name" name="nameForm" size="40" maxlength="40">
+                <select name="geometric">
+                    <option value="-">Pessoa Física ou Jurídica?</option>
+                    <option value="1" name="Customer">Pessoa Física</option>
+                    <option value="2" name="Enterprise">Pessoa Jurídica</option>
+                </select>   
             </div>
             <div>
                 <input type="submit" name="btnSearch" id="btnSearch" value="Buscar Cliente">

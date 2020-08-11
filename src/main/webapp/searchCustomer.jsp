@@ -6,6 +6,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="com.google.gson.Gson"%>
 <%@ page import="com.google.gson.GsonBuilder"%>
+<%@ page import="java.io.PrintWriter"%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,7 +37,6 @@
                     //out.println("Número= " + c.getNumber() + "\n");
                     //out.println("Bairro= " + c.getDistrict() + "\n");
                     //out.println("UF= " + c.getUf() + "\n");
-
                     Gson gson = null;
 
                     String pessoaFisica = new Gson().toJson(c);
@@ -46,8 +46,7 @@
                 }
 
             } catch (SQLException e) {
-                out.println("<p>Erro " + e.getMessage() + "</p>");
-                
+                out.println("<p>Erro " + e.getMessage() + "</p>");                
             }          
 
         %> 
