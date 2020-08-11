@@ -4,6 +4,8 @@
 <%@ page import="java.sql.SQLException"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.List"%>
+<%@ page import="com.google.gson.Gson"%>
+<%@ page import="com.google.gson.GsonBuilder"%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,19 +25,24 @@
             try {
                 PessoaFisicaDao dao = new PessoaFisicaDao();
                 List<PessoaFisica> lstPessoaFisica = dao.pesquisar();
-                out.println("ok");                
+                out.println("<h1>Pessoa Física<h1>");
 
                 for (PessoaFisica c : lstPessoaFisica) {
-                    out.println("<div>");
-                    out.println("<p>ID: " + c.getIdCustomer() + "</p>");
-                    out.println("<p>Nome: " + c.getName() + "</p>");
-                    out.println("<p>Telefone: " + c.getPhone() + "</p>");
-                    out.println("<p>CPF: " + c.getCPF() + "</p>");
-                    out.println("<p>Rua: " + c.getStreet() + "</p>");
-                    out.println("<p>Número: " + c.getNumber() + "</p>");
-                    out.println("<p>Bairro: " + c.getDistrict() + "</p>");
-                    out.println("<p>UF: " + c.getUf() + "</p>");
-                    out.println("</div>");
+                    //out.println("ID= " + c.getIdCustomer() + "\n");
+                    //out.println("Nome= " + c.getName() + "\n");
+                    //out.println("Telefone= " + c.getPhone() + "\n");
+                    //out.println("CPF= " + c.getCPF() + "\n");
+                    //out.println("Rua= " + c.getStreet() + "\n");
+                    //out.println("Número= " + c.getNumber() + "\n");
+                    //out.println("Bairro= " + c.getDistrict() + "\n");
+                    //out.println("UF= " + c.getUf() + "\n");
+
+                    Gson gson = null;
+
+                    String pessoaFisica = new Gson().toJson(c);
+                    out.println("<span>");
+                    out.println(pessoaFisica);
+                    out.println("</span>");
                 }
 
             } catch (SQLException e) {

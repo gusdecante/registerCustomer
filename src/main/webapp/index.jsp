@@ -64,12 +64,12 @@
                 <input type="submit" name="btnSearch" id="btnSearch" value="Buscar Cliente">
             </div>
         </form>
-        <form class="formThree" method="POST" action="searchCustomer.jsp" name="list_Pessoas_Fisicas">
+        <form class="formThree" method="GET" action="searchCustomer.jsp" name="list_Pessoas_Fisicas">
             <div>
                 <input type="submit" name="btnList" id="btnList" value="Listar Pessoas Físicas">
             </div>
         </form>
-        <form class="formFour" method="POST" action="searchCustomerEnterprise.jsp" name="list_Pessoas_Juridicas">
+        <form class="formFour" method="GET" action="searchCustomerEnterprise.jsp" name="list_Pessoas_Juridicas">
             <div>
                 <input type="submit" name="btnListEnterprise" id="btnListEnterprise" value="Listar Pessoas Jurídicas">
             </div>

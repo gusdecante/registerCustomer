@@ -36,7 +36,7 @@ public class PessoaFisicaDao {
         con.close();
     }
 
-
+    //listagem
     public List<PessoaFisica> pesquisar() throws SQLException, Exception {
         
         List<PessoaFisica> lista = new ArrayList();
